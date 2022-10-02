@@ -1,10 +1,3 @@
-function capitalizeFirstLetterOnly(string) {
-    let returnString = string.toLowerCase();
-    let firstCharacterUpperCased = returnString.charAt(0).toUpperCase();
-    returnString = firstCharacterUpperCased + returnString.slice(1);
-    return returnString;
-}
-
 function getComputerChoice() {
     let choiceNum = Math.floor(Math.random() * 3);
 
@@ -23,8 +16,8 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
     image1.classList.remove('image-win');
     image2.classList.remove('image-win');
-    image1.setAttribute('src',`${playerSelection}.png`);
-    image2.setAttribute('src',`${computerSelection}.png`);
+    image1.setAttribute('src', `${playerSelection}.png`);
+    image2.setAttribute('src', `${computerSelection}.png`);
     roundText.textContent = `Round: ${roundNumber}`;
     roundNumber++;;
 
@@ -109,8 +102,8 @@ buttonReset.addEventListener('click', (e) => {
     computerScore = 0;
     image1.classList.remove('image-win');
     image2.classList.remove('image-win');
-    image1.setAttribute('src',"Initial.png");
-    image2.setAttribute('src',"Initial.png");
+    image1.setAttribute('src', "Initial.png");
+    image2.setAttribute('src', "Initial.png");
     roundText.textContent = "Round: ";
     ScoreText.textContent = "Player: 0 Computer:0";
     detailText.textContent = "Waiting for first move..";
@@ -120,15 +113,15 @@ buttonReset.addEventListener('click', (e) => {
 })
 
 function checkWin() {
-    if (playerScore === 5){
+    if (playerScore === 5) {
         detailText.textContent += ". Player wins game!";
         buttonRock.disabled = true;
         buttonPaper.disabled = true;
         buttonScissors.disabled = true;
-    } else if (computerScore === 5){
+    } else if (computerScore === 5) {
         detailText.textContent += ". Computer wins game!";
         buttonRock.disabled = true;
         buttonPaper.disabled = true;
         buttonScissors.disabled = true;
-    }   
+    }
 }

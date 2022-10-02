@@ -37,6 +37,8 @@ h1{
 .images-container{
     display: flex;
     gap: 60px;
+    justify-content: center;
+    align-items: center;
 }
 
 .image-win{
