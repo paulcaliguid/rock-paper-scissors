@@ -1,0 +1,44 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container1{
+    margin-top: -90px;
+    text-align: center;
+}
+
+.buttons-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+button{
+    height: 80px;
+    width: 150px;
+    font-weight: bold;
+}
+
+img{
+    width: 250px;
+    height: auto;
+}
+
+h1{
+    margin-bottom: 30px;
+}
+
+.images-container{
+    display: flex;
+    gap: 60px;
+}
+
+.image-win{
+    border: 3px solid gold;
+}
