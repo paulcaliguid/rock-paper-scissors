@@ -199,19 +199,21 @@ button {
 #image1,
 #image2 {
     --hand-flip: 1;
-    --hand-shift-x: 0px;
-    --hand-shift-y: 10px;
-    --hand-scale: 0.92;
+    --hand-bottom: 16px;
+    --hand-scale: 0.98;
     --hand-rotation: 0deg;
     position: absolute;
-    inset: 0;
+    left: 0;
+    right: 0;
+    bottom: var(--hand-bottom);
     z-index: 1;
     display: block;
-    margin: auto;
-    width: min(100%, 286px);
-    height: min(100%, 286px);
+    margin-inline: auto;
+    width: min(100%, 254px);
+    height: min(100%, 254px);
     object-fit: contain;
-    transform: translate(var(--hand-shift-x), var(--hand-shift-y)) scale(var(--hand-scale)) scaleX(var(--hand-flip)) rotate(var(--hand-rotation));
+    object-position: center bottom;
+    transform: scaleX(var(--hand-flip)) scale(var(--hand-scale)) rotate(var(--hand-rotation));
     filter: drop-shadow(0 20px 24px rgba(0, 0, 0, 0.4));
     transform-origin: center center;
     pointer-events: none;
@@ -219,6 +221,24 @@ button {
 
 #image2 {
     --hand-flip: -1;
+}
+
+#image1[data-hand="rock"],
+#image2[data-hand="rock"] {
+    --hand-scale: 1.02;
+    --hand-bottom: 14px;
+}
+
+#image1[data-hand="paper"],
+#image2[data-hand="paper"] {
+    --hand-scale: 0.94;
+    --hand-bottom: 12px;
+}
+
+#image1[data-hand="scissors"],
+#image2[data-hand="scissors"] {
+    --hand-scale: 0.98;
+    --hand-bottom: 14px;
 }
 
 #image1[hidden],
@@ -378,15 +398,26 @@ button {
 }
 
 .move-icon {
-    width: min(100%, 150px);
-    height: 136px;
+    --move-icon-scale: 1;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
+    object-position: center bottom;
+    transform: scale(var(--move-icon-scale));
+    transform-origin: center center;
     filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.32));
 }
 
+.move-button[data-move="rock"] .move-icon {
+    --move-icon-scale: 1.04;
+}
+
 .move-button[data-move="paper"] .move-icon {
-    width: min(100%, 134px);
-    transform: translateY(6px);
+    --move-icon-scale: 0.95;
+}
+
+.move-button[data-move="scissors"] .move-icon {
+    --move-icon-scale: 0.99;
 }
 
 .reset-button {
