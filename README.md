@@ -6,7 +6,7 @@ A browser-based Rock Paper Scissors game with a polished arena UI, illustrated h
 
 Play online: https://paulcaliguid.github.io/rock-paper-scissors/
 
-Open `index.html` in your browser and choose **Rock**, **Paper**, or **Scissors**. The computer plays instantly, the scoreboard updates after each round, and the reset button starts a fresh match at any time.
+Or after downloading, open `index.html` in your browser and choose **Rock**, **Paper**, or **Scissors**. The computer plays instantly, the scoreboard updates after each round, and the reset button starts a fresh match at any time.
 
 ## Project structure
 
