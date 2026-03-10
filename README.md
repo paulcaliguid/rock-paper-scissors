@@ -1,24 +1,19 @@
 # Rock Paper Scissors
 
-A simple browser game that lets you play the classic game of Rock, Paper,
-Scissors against a computer opponent. The first to reach five points wins the
-match.
+A browser-based Rock Paper Scissors game with a polished arena UI, illustrated hand assets, and a first-to-five match flow against the computer.
 
 ## Play
 
-Open `index.html` in your browser and click on one of the **Rock**, **Paper**
-or **Scissors** buttons. The computer will randomly choose its own move and the
-scoreboard will update after each round. A reset button is available to start a
-new match at any time.
+Open `index.html` in your browser and choose **Rock**, **Paper**, or **Scissors**. The computer plays instantly, the scoreboard updates after each round, and the reset button starts a fresh match at any time.
 
 ## Project structure
 
-- `index.html` – markup and page structure
-- `style.css` – styles for layout and visuals
-- `script.js` – game logic and interaction handlers
-- `*.png` – images used for the player and computer selections
+- `index.html` - page structure and game layout
+- `style.css` - polished game styling, motion, and responsive layout
+- `script.js` - game logic, hand swapping, scoring, and UI state
+- `assets/compressed/` - active SVG hand illustrations used by the game
+- `assets/legacy/` - original PNG assets kept for reference
 
-![Initial screen](Initial.png)
+![Initial screen](assets/legacy/Initial.png)
 
-Built with vanilla JavaScript, HTML and CSS.
-
+Built with vanilla JavaScript, HTML, and CSS.

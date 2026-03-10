@@ -9,21 +9,67 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container1">
-        <h1 id="round">Round: </h1>
-        <h2>Score (first to 5)</h2>
-        <h2 id="score">Player: 0 Computer:0</h2>
-        <div class="images-container">
-            <img src="Initial.png" alt="rock" id="image1">
-            <img src="Initial.png" alt="rock" id="image2">
-        </div>
-        <h2 id="detail">Waiting for first move..</h2>
-    </div>
-    <div class="buttons-container">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
-    </div>
-    <button id="reset">Reset</button>
+    <main class="game-shell">
+        <section class="hero-panel">
+            <p class="eyebrow">Arcade Showdown</p>
+            <h1>Rock Paper Scissors</h1>
+            <p class="hero-copy">Challenge the computer in a first-to-five duel and watch each round play out in the arena.</p>
+        </section>
+
+        <section class="status-grid">
+            <article class="stat-card">
+                <p class="stat-label">Round</p>
+                <h2 id="round">Round: 1</h2>
+            </article>
+            <article class="stat-card">
+                <p class="stat-label">Race</p>
+                <h2>First to 5</h2>
+            </article>
+            <article class="stat-card score-card">
+                <p class="stat-label">Scoreboard</p>
+                <h2 id="score" aria-live="polite">Player: 0 Computer: 0</h2>
+            </article>
+        </section>
+
+        <section class="arena-panel">
+            <div class="player-card player-card-human">
+                <p class="card-label">Player</p>
+                <div class="hand-frame hand-frame-human is-idle" id="player-frame" data-idle-label="Choose a move">
+                    <img alt="Player hand" id="image1" hidden>
+                </div>
+            </div>
+
+            <div class="versus-badge">VS</div>
+
+            <div class="player-card player-card-cpu">
+                <p class="card-label">Computer</p>
+                <div class="hand-frame hand-frame-cpu is-idle" id="cpu-frame" data-idle-label="Waiting...">
+                    <img alt="Computer hand" id="image2" hidden>
+                </div>
+            </div>
+        </section>
+
+        <section class="detail-panel" data-tone="idle">
+            <p class="detail-label">Battle Feed</p>
+            <h2 id="detail" aria-live="polite">Waiting for the first move...</h2>
+        </section>
+
+        <section class="buttons-container" aria-label="Choose your move">
+            <button id="rock" class="move-button" data-move="rock" type="button">
+                <img src="assets/compressed/rock.svg" alt="" class="move-icon">
+                <span>Rock</span>
+            </button>
+            <button id="paper" class="move-button" data-move="paper" type="button">
+                <img src="assets/compressed/paper-adjusted.svg" alt="" class="move-icon">
+                <span>Paper</span>
+            </button>
+            <button id="scissors" class="move-button" data-move="scissors" type="button">
+                <img src="assets/compressed/scissors.svg" alt="" class="move-icon">
+                <span>Scissors</span>
+            </button>
+        </section>
+
+        <button id="reset" class="reset-button" type="button">Reset Match</button>
+    </main>
 </body>
 </html>
