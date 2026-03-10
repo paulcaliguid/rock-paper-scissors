@@ -200,8 +200,8 @@ button {
 #image2 {
     --hand-flip: 1;
     --hand-shift-x: 0px;
-    --hand-shift-y: 0px;
-    --hand-scale: 0.96;
+    --hand-shift-y: 10px;
+    --hand-scale: 0.92;
     --hand-rotation: 0deg;
     position: absolute;
     inset: 0;
@@ -225,24 +225,6 @@ button {
 #image2[hidden] {
     display: none !important;
 }
-#image1[data-hand="rock"],
-#image2[data-hand="rock"] {
-    --hand-scale: 0.93;
-    --hand-shift-y: 12px;
-}
-
-#image1[data-hand="paper"],
-#image2[data-hand="paper"] {
-    --hand-scale: 0.9;
-    --hand-shift-y: 18px;
-}
-
-#image1[data-hand="scissors"],
-#image2[data-hand="scissors"] {
-    --hand-scale: 0.92;
-    --hand-shift-y: 8px;
-}
-
 .hand-reveal {
     animation: handReveal 320ms var(--ease-out);
 }
