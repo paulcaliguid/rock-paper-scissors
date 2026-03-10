@@ -476,12 +476,10 @@ button {
 @keyframes handReveal {
     0% {
         opacity: 0;
-        transform: translate(var(--hand-shift-x), calc(var(--hand-shift-y) + 18px)) scale(var(--hand-scale)) scaleX(var(--hand-flip)) rotate(var(--hand-rotation));
     }
 
     100% {
         opacity: 1;
-        transform: translate(var(--hand-shift-x), var(--hand-shift-y)) scale(var(--hand-scale)) scaleX(var(--hand-flip)) rotate(var(--hand-rotation));
     }
 }
 
