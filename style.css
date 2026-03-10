@@ -198,23 +198,27 @@ button {
 
 #image1,
 #image2 {
-    --base-transform: none;
+    --hand-flip: 1;
     --hand-shift-x: 0px;
     --hand-shift-y: 0px;
     --hand-scale: 0.96;
     --hand-rotation: 0deg;
-    position: relative;
+    position: absolute;
+    inset: 0;
     z-index: 1;
+    display: block;
+    margin: auto;
     width: min(100%, 286px);
     height: min(100%, 286px);
     object-fit: contain;
-    transform: var(--base-transform) translate(var(--hand-shift-x), var(--hand-shift-y)) scale(var(--hand-scale)) rotate(var(--hand-rotation));
+    transform: translate(var(--hand-shift-x), var(--hand-shift-y)) scale(var(--hand-scale)) scaleX(var(--hand-flip)) rotate(var(--hand-rotation));
     filter: drop-shadow(0 20px 24px rgba(0, 0, 0, 0.4));
     transform-origin: center center;
+    pointer-events: none;
 }
 
 #image2 {
-    --base-transform: scaleX(-1);
+    --hand-flip: -1;
 }
 
 #image1[data-hand="rock"],
@@ -455,12 +459,12 @@ button {
 @keyframes handReveal {
     0% {
         opacity: 0;
-        transform: var(--base-transform) translate(var(--hand-shift-x), calc(var(--hand-shift-y) + 18px)) scale(var(--hand-scale)) rotate(var(--hand-rotation));
+        transform: translate(var(--hand-shift-x), calc(var(--hand-shift-y) + 18px)) scale(var(--hand-scale)) scaleX(var(--hand-flip)) rotate(var(--hand-rotation));
     }
 
     100% {
         opacity: 1;
-        transform: var(--base-transform) translate(var(--hand-shift-x), var(--hand-shift-y)) scale(var(--hand-scale)) rotate(var(--hand-rotation));
+        transform: translate(var(--hand-shift-x), var(--hand-shift-y)) scale(var(--hand-scale)) scaleX(var(--hand-flip)) rotate(var(--hand-rotation));
     }
 }
 
