@@ -221,6 +221,10 @@ button {
     --hand-flip: -1;
 }
 
+#image1[hidden],
+#image2[hidden] {
+    display: none !important;
+}
 #image1[data-hand="rock"],
 #image2[data-hand="rock"] {
     --hand-scale: 0.93;
